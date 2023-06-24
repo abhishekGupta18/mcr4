@@ -9,3 +9,12 @@
   padding: 0;
   margin: 0;
 }
+
+.up_arrow svg {
+  color: #3730a3;
+  font-size: 5rem;
+}
+.down_arrow svg {
+  color: #94a3b8;
+  font-size: 5rem;
+}

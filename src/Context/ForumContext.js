@@ -5,7 +5,7 @@ import { forumData } from "../Data";
 export const ForumContext = createContext();
 
 export const ForumContextProvider = ({ children }) => {
-  const [data, setData] = useState(forumData);
+  const [data, setData] = useState(forumData.posts);
 
   return (
     <ForumContext.Provider value={{ data }}>{children}</ForumContext.Provider>

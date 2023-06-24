@@ -1,9 +1,17 @@
 import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
+
 import { Home } from "./Pages/Home";
+import { PostDetail } from "./Pages/PostDetail";
+
 function App() {
   return (
     <div>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="postDetail/:postId" element={<PostDetail />} />
+      </Routes>
     </div>
   );
 }
