@@ -1,7 +1,11 @@
 import "./App.css";
-
+import { Home } from "./Pages/Home";
 function App() {
-  return <div className=" bg-blue-50 ">hi abhishek</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 }
 
 export default App;
