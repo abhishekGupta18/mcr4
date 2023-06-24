@@ -1,8 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return <div className="App">hi abhishek</div>;
+  return <div className=" bg-blue-50 ">hi abhishek</div>;
 }
 
 export default App;
+
+// https://fluffy-boba-4d3ab9.netlify.app/
