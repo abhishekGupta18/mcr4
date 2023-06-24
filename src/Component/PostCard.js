@@ -5,10 +5,16 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
 import ShareIcon from "@mui/icons-material/Share";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useState } from "react";
 
 export const PostCard = ({ post }) => {
-  const voteCount = post.upvotes - post.downvotes;
   const navigate = useNavigate();
+
+  const incVote = () => {};
+
+  const [bookmark, setBookmark] = useState(false);
+
   return (
     <div className="w-[35rem] flex justify-center gap-8 p-4 rounded-[0.5rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
       <div className="flex flex-col justify-start items-center">
@@ -48,7 +54,15 @@ export const PostCard = ({ post }) => {
           </div>
 
           <ShareIcon />
-          <BookmarkBorderOutlinedIcon />
+          {bookmark ? (
+            <div onClick={() => setBookmark(false)}>
+              <BookmarkIcon />
+            </div>
+          ) : (
+            <div onClick={() => setBookmark(true)}>
+              <BookmarkBorderOutlinedIcon />
+            </div>
+          )}
         </div>
       </div>
     </div>

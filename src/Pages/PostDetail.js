@@ -4,14 +4,6 @@ import { useParams } from "react-router-dom";
 import { useForumContext } from "../Context/ForumContext";
 import { PostCard } from "../Component/PostCard";
 
-// {
-//     commentId: "89898-856-87576",
-//     username: "ashwin4real",
-//     picUrl: "http://bit.ly/42Zm7tM",
-//     likes: 0,
-//     comment: "Interested",
-//     createdAt: "2023-06-24T12:01:00Z",
-//   },
 export const PostDetail = () => {
   const { postId } = useParams();
   const { data } = useForumContext();
